@@ -22,3 +22,8 @@ function startWebService(WebService $service) {
         Trace::fatal($error);
     }
 }
+
+function startCliService(CliService $cliService) {
+    $dojet = new Dojet();
+    $dojet->start($cliService);
+}

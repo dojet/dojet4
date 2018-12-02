@@ -223,23 +223,6 @@ function safeCallMethod($obj, $func) {
     return null;
 }
 
-function setValueIfNull(&$var, $defaultValue) {
-    $var = null === $var ? $defaultValue : $var;
-}
-
-function setValueIfEmpty(&$var, $defaultValue) {
-    $var = empty($var) ? $defaultValue : $var;
-}
-
-function defaultNullValue($var, $defaultValue = null) {
-    return is_null($var) ? $defaultValue : $var;
-}
-
-function defaultEmptyValue($var, $defaultValue = null) {
-    $defaultValue = defaultNullValue($defaultValue, $var);
-    return empty($var) ? $defaultValue : $var;
-}
-
 function is_empty($var) {
     for ($i = 0; $i < func_num_args(); $i++) {
         $arg = func_get_arg($i);
