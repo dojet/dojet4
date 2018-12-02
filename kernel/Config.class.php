@@ -78,7 +78,7 @@ class Config {
      * @return mix
      */
     public static function rc($keyPath, $runtime = null, $config = null, $default = null) {
-        is_null($runtime) and $runtime = Config::get('runtime');
+        is_null($runtime) and $runtime = Config::c('runtime');
         if (is_null($runtime)) {
             throw new Exception("runtime not set", 1);
         }
@@ -89,7 +89,7 @@ class Config {
             $runtimeKeypath = $keyPath.'.'.$runtime;
         }
 
-        return Config::get($runtimeKeypath, $config, $default);
+        return Config::c($runtimeKeypath, $config, $default);
     }
 
     public static function conf() {
