@@ -10,7 +10,7 @@ abstract class BaseAction {
     protected $tplData;
     protected $webService;
 
-    final function __construct(WebService $webService) {
+    function __construct(WebService $webService) {
         $this->tplData = [];
         $this->webService = $webService;
         $this->init();
