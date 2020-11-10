@@ -9,7 +9,7 @@ class Config {
 
     private static $config;
 
-    private static function loadConfig($confFile) {
+    public static function loadConfig($confFile) {
         $filename = sprintf("%s/%s.conf.php", $confFile, Config::c('runtime'));
         if (!file_exists($filename)) {
             $filename = $confFile.'.conf.php';
