@@ -53,4 +53,7 @@ abstract class WebService extends Service implements IRouteDelegate {
         header('HTTP/1.1 404 Not Found');
     }
 
+    public function root() {
+
+    }
 }
